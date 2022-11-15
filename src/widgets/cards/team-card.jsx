@@ -25,7 +25,6 @@ export function TeamCard({ img, name, position, socials }) {
 
 TeamCard.defaultProps = {
   position: "",
-  socials: null,
 };
 
 TeamCard.propTypes = {

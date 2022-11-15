@@ -68,14 +68,18 @@ export function Navbar({ brandName, routes, action }) {
             {brandName}
           </Typography>
         </Link>
-        <div className="hidden lg:block">{navList}</div>
+        {/* <div className="hidden lg:block">{navList}</div> */}
         <div className="hidden gap-2 lg:flex">
-          <a
-            href="https://www.material-tailwind.com/blocks?ref=mtkr"
-            target="_blank"
-          >
-            <Button variant="text" size="sm" color="white" fullWidth>
-              pro version
+          <a>
+            <Button onClick={() => {
+      
+      window.scrollTo({
+        top: 1300,
+        behavior: 'smooth'
+      })
+      }} 
+      variant="text" size="sm" color="white" fullWidth>
+              pro versiya
             </Button>
           </a>
           {React.cloneElement(action, {
@@ -103,8 +107,6 @@ export function Navbar({ brandName, routes, action }) {
         <div className="container mx-auto">
           {navList}
           <a
-            href="https://www.material-tailwind.com/blocks/react?ref=mtkr"
-            target="_blank"
             className="mb-2 block"
           >
             <Button variant="text" size="sm" fullWidth>
@@ -121,14 +123,18 @@ export function Navbar({ brandName, routes, action }) {
 }
 
 Navbar.defaultProps = {
-  brandName: "Material Tailwind React",
+  brandName: "DisPot",
   action: (
     <a
-      href="https://www.creative-tim.com/product/material-tailwind-kit-react"
-      target="_blank"
     >
-      <Button variant="gradient" size="sm" fullWidth>
-        Tell exactly what you want!
+      <Button onClick={() => {
+      
+        window.scrollTo({
+          top: 1300,
+          behavior: 'smooth'
+        })
+        }} variant="gradient" size="sm" fullWidth>
+        Tam olaraq nə istədiyini bölüş
       </Button>
     </a>
   ),

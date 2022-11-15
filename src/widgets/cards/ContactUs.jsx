@@ -30,12 +30,12 @@ export const ContactUs = () => {
 
 
       <div className="mb-8 flex gap-8">
-        <Input required type="text" name="user_name" variant="standard" size="lg" label="Full Name" />
+        <Input required type="text" name="user_name" variant="standard" size="lg" label="Ad" />
         <Input required type="email" name="user_email" variant="standard" size="lg" label="Email Address" />
       </div>
-      <Textarea required name="message" variant="standard" size="lg" label="Message" rows={8} />
+      <Textarea required name="message" variant="standard" size="lg" label="Tam olaraq nə istədiyini yaza və ya boş buraxa bilərsən" rows={8} />
       <Button type="submit" value="Send" variant="gradient" size="lg" className="mt-8">
-        Send Message
+        Göndər
       </Button>
       
       {/* <label>Name</label>
