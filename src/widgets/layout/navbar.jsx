@@ -123,7 +123,7 @@ export function Navbar({ brandName, routes, action }) {
 }
 
 Navbar.defaultProps = {
-  brandName: "DisPot",
+  brandName: "Yusif Networks",
   action: (
     <a
     >
