@@ -9,6 +9,7 @@ import {
   IconButton,
   Input,
   Textarea,
+  popover
 } from "@material-tailwind/react";
 
 export const ContactUs = () => {
@@ -25,6 +26,10 @@ export const ContactUs = () => {
       });
   };
 
+  function Feedback() {
+    return "Qeydiyyatdan keçdiyiniz üçün təşəkkür edirik!"
+  }
+
   return (
     <form ref={form} onSubmit={sendEmail} className="mx-auto mt-12 max-w-3xl text-center">
 
@@ -33,8 +38,8 @@ export const ContactUs = () => {
         <Input required type="text" name="user_name" variant="standard" size="lg" label="Ad" />
         <Input required type="email" name="user_email" variant="standard" size="lg" label="Email Address" />
       </div>
-      <Textarea required name="message" variant="standard" size="lg" label="Tam olaraq nə istədiyini yaza və ya boş buraxa bilərsən" rows={8} />
-      <Button type="submit" value="Send" variant="gradient" size="lg" className="mt-8">
+      <Textarea required name="message" variant="standard" size="lg" label="Tam olaraq nə istədiyini yaza və ya boş buraxa bilərsən. Qeyd: `Göndər` düyməsinə basdıqdan sonra heç nə görsənməyə bilər, lakin biz əlaqə saxlayacağıq!" rows={10} />
+      <Button onClick={Feedback()} type="submit" value="Send" variant="gradient" size="lg" className="mt-8">
         Göndər
       </Button>
       
